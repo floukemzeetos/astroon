@@ -1,0 +1,1178 @@
+/* === FONTE PERSONALIZADA - FREDOKA === */
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@75..125,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+/* === FIM - FONTE PERSONALIZADA === */
+
+
+/* === ROOT === */
+
+:root {
+    --whit: #f9f6ee;
+    --blu: #84cdf8;
+    --blu2: #00bfff;
+    --blu3: #1d1a33;
+    --blu_translucido: #84cef896;
+    --blac: #202020;
+    --blac2: #151515;
+    --azure: #232c44;
+    --gra: #7a7a7a;
+
+    --gold1: #bba14f;
+    --gold2: #ac9341f3;
+    --off_whit: #fffceb;
+
+    /* === CURSOS === */
+    --senai: #0e4194;
+    --brad: #e6103d;
+    --if: #2b9f3f;
+}
+
+/* === FIM - ROOT === */
+
+
+/* === FORMATAÇÃO DA PÁGINA === */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    background-color: var(--blac2);
+}
+/* === FIM - FORMATAÇÃO DA PÁGINA === */
+
+
+/* === CONFIGURAÇÃO CENTRAL === */
+
+header a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--blac2);
+    padding: 1.55% 2.5% !important;
+}
+
+header h1 {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    color: var(--blu);
+    font-size: 2.4rem;
+}
+
+header h1 span.white {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    color: var(--whit);
+}
+
+header button.btu {
+    width: 45px;
+    height: 45px;
+    background-color: transparent;
+    margin: 0 4px;
+    border-radius: 6px;
+    border: none;
+    color: var(--whit);
+    font-size: 1.1rem;
+    transition: .5s;
+}
+
+header button.btu:hover {
+    background-color: var(--blu_translucido);
+    cursor: pointer;
+
+}
+
+section.title {
+    position: relative;
+    height: 691px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('gif/bg.gif');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    padding: 0 !important;
+}
+
+section.title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+    z-index: 1;
+}
+
+section.title h1{
+    position: relative;
+    z-index: 2;
+    font-family: 'Fredoka', sans-serif;
+    color: var(--whit);
+    text-align: center;
+}
+
+section.title p {
+    position: relative;
+    z-index: 2;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--whit);
+    text-align: center;
+    font-weight: 700;
+}
+
+section.title h1 {
+    font-size: 4.4rem;
+}
+
+section.title p {
+    font-size: 1.3rem;
+}
+
+section.title h1 span.blu {
+    color: var(--blu);
+}
+    
+section.co {
+    padding: 10px 50px;
+    background-color: var(--blac2);
+}
+
+section.co h1 {
+    text-align: center;
+    margin-inline-end: 2.5rem;
+    font-size: 1.92rem;
+    margin-bottom: 12px;
+    color: var(--whit);
+    font-family: 'Fredoka', sans-serif;
+}
+
+.stock-ticker {
+    font-size: 15px;
+    padding: 8px;
+    border-block: 1px solid var(--whit);
+    overflow: hidden;
+    user-select: none;
+    white-space: nowrap;
+}
+
+.ticker-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 25s linear infinite;
+}
+
+.ticker-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 2rem;
+}
+
+.clone {
+    margin-left: 2rem;
+}
+
+.ticker-list li {
+    flex: 0 0 auto;
+}
+
+.ic, .course {
+    font-weight: 800;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--blu);
+}
+
+.course2 {
+    margin-inline: 2px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--whit);
+    font-weight: 700;
+}
+
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+section.sobre {
+    padding: 1% 9.5%;
+    background-color: var(--blac2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 500px;
+}
+
+/* --- MOLDURA SUPREMA ASTROON --- */
+section.sobre img {
+    height: 270px;
+    width: 270px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+
+    /* camada interna — anel brilhante suave */
+    padding: 10px;
+    background:
+        radial-gradient(circle at 40% 30%, 
+            rgba(255,255,255,0.25), 
+            rgba(255,255,255,0) 60%) padding-box,
+
+        conic-gradient(
+            from 0deg,
+            var(--blu) 0deg,
+            var(--blu2) 120deg,
+            var(--whit) 220deg,
+            var(--blu) 360deg
+        ) border-box;
+
+    border: 4px solid transparent;
+
+    /* profundidade + atmosfera */
+    box-shadow:
+        0 0 22px rgba(0,0,0,0.45),
+        0 0 18px rgba(0,123,255,0.25),
+        inset 0 0 22px rgba(255,255,255,0.15);
+
+    transition: transform .35s ease, 
+                box-shadow .35s ease,
+                filter .35s ease;
+}
+
+section.sobre img:hover {
+    transform: scale(1.05);
+    box-shadow:
+        0 0 28px rgba(0,0,0,0.55),
+        0 0 25px var(--blu),
+        inset 0 0 28px rgba(255,255,255,0.18);
+    filter: brightness(1.05);
+}
+
+
+/* ---- TÍTULO ---- */
+section.sobre h1 {
+    text-align: right;
+    font-size: 2.45rem;
+    color: var(--whit);
+    font-family: 'Fredoka', sans-serif;
+    line-height: 1.15;
+    margin-bottom: 1.5%;
+    font-weight: 600;
+}
+
+section.sobre h1 span.blu {
+    color: var(--blu);
+}
+
+/* ---- TEXTO ---- */
+section.sobre p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--whit);
+    font-size: .97rem;
+    line-height: 1.55;
+    margin-left: 16%;
+    text-align: justify;
+    text-align-last: right;
+	font-weight: 700;
+}
+
+/* ---- BLOCOS DE TEXTO ---- */
+section.sobre .desk {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .7rem;
+    max-width: 500px; /* mantém texto elegante */
+}
+
+section.cards {
+    background-color: var(--blac2);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px 3%;
+    
+}
+
+section.cards h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.92rem;
+    color: var(--whit);
+    margin-bottom: 10px;
+}
+
+section.cards .card {
+    background-color: var(--azure);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 35px;
+}
+
+section.cards .card img {
+    width: 440px;
+    height: 230px;
+    align-items: center;
+    border-radius: 15px;
+    margin-bottom: 8px;
+}
+
+section.cards .card a button {
+    background-color: transparent;
+    border: 2px solid var(--whit);
+    border-radius: 10px;
+    width: 100%;
+    height: 55px;
+    color: var(--whit); 
+    font-weight: 700;
+    transition: .5s;
+    align-items: right;
+    margin-top: 25px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.05rem;
+}
+
+section.cards .card a button:hover {
+    background-color: var(--blu);
+    color: var(--blac2);
+}
+
+section.cards .card h2 {
+    font-family: 'Fredoka', sans-serif;
+    color: var(--whit);
+    font-size: 1.6rem;
+}
+
+section.cards .card h2 span {
+    color: var(--blu);
+}
+
+section.cards .card p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--whit);
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+section.barcolor {
+    background-image: linear-gradient(to right, #00a2ff, #7438ff, #920dff, #ff20e1);
+    height: 7px;
+}
+
+footer {
+    background-color: var(--blac);
+    padding: 20px 3%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+footer .copy {
+    grid-column: 1 / -1;
+    text-align: center;
+    border-block: 1px solid var(--gra);
+    margin-top: 10px;
+}
+
+footer .copy p {
+    margin-bottom: 7px;
+    margin-top: 7px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--whit);
+    font-size: 0.89rem;
+    font-weight: 700;
+}
+
+footer ul li {
+    list-style: none;
+    padding: 9px 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+   
+}
+
+footer ul li a i {
+    padding-right: 8px;
+   
+}
+
+footer a {
+    color: var(--whit);
+    text-decoration: none;
+    transition: .5s;
+    
+}
+
+footer a:hover {
+    color: var(--blu2);
+}
+
+footer .info1 h1{
+    font-family: 'Fredoka', sans-serif;
+    color: var(--whit);
+    font-weight: 600;
+}
+
+footer .info1 h1 span{
+    color: var(--blu);
+}
+
+footer .disc h2, footer .out h2{
+    font-family: 'Fredoka', sans-serif;
+    color: var(--whit);
+    font-weight: 600;
+}
+
+footer .info1 p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--whit);
+    font-size: .98rem;
+    font-weight: 700;
+    margin-top: 3px;
+    padding-right: 25px;
+}
+
+footer .info1 p.fe {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--whit);
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-align: justify;
+    padding-right: 20px;
+}
+
+footer .out a button {
+    width: 45px;
+    height: 45px;
+    background-color: transparent;
+    border: 2px solid #171717;
+    border-radius: 5px;
+    transition: .5s;
+    color: var(--whit);
+    font-size: 1.6rem;
+}
+
+footer .out a {
+    padding: 0 15px 0 0;
+}
+
+footer .out a button:hover {
+    background-color: var(--blu);
+    color: var(--blac2);
+}
+
+footer .out h2 {
+    padding-bottom: 15px;
+}
+
+footer .out {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+footer h1 {
+    font-size: 2.4rem;
+}
+
+/* === FIM - CONFIGURAÇÃO CENTRAL === */
+
+/* === PG02 === */
+section.title2 {
+    position: relative;
+    height: 407px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('gif/bg3.gif');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    padding: 0 !important;
+}
+
+section.title3 {
+    position: relative;
+    height: 407px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('gif/bg2.gif');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    padding: 0 !important;
+}
+
+section.title4 {
+    position: relative;
+    height: 407px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('gif/bg04.gif');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    padding: 0 !important;
+}
+
+section.title5 {
+    position: relative;
+    height: 407px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('gif/bg5.gif');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    padding: 0 !important;
+}
+
+section.title2::before, 
+section.title4::before, 
+section.title3::before,
+section.title5::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+    z-index: 1;
+}
+
+section.title2 h1, section.title3 h1, section.title4 h1, section.title5 h1{
+    position: relative;
+    z-index: 2;
+    font-family: 'Fredoka', sans-serif;
+    color: var(--whit);
+    text-align: center;
+}
+
+section.title2 p, section.title3 p, section.title4 p, section.title5 p {
+    position: relative;
+    z-index: 2;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--whit);
+    text-align: center;
+    font-weight: 700;
+}
+
+section.title2 h1, section.title3 h1, section.title4 h1, section.title5 h1 {
+    font-size: 4.4rem;
+}
+
+section.title2 p, section.title3 p, section.title4 p, section.title5 p {
+    font-size: 1.3rem;
+}
+
+section.title2 h1 span.blu, section.title3 h1 span.blu, section.title4 h1 span.blu, section.title5 h1 span.blu {
+    color: var(--blu);
+}
+
+section.painel1 {
+    background-color: var(--blac2);
+    height: auto;
+}
+
+section.painel1 h1 {
+    text-align: center;
+    font-family: 'Fredoka', sans-serif;
+    color: var(--whit);
+    font-size: 1.92rem;
+    font-weight: 600;
+    padding-top: 1.5%;
+}
+
+section.painel1 .contain {
+    background-color: var(--azure);
+    padding: 1.44% 2.5%;
+    margin: 1.44% 2.5%;
+    display: flex;
+    border-radius: 17px;
+    gap: 2%;
+    align-items: center;
+    justify-content: center;
+}
+
+section.painel1 .contain .img {
+    width: 90px;
+    height: 90px;
+    background-color: var(--blu3);
+    border: 2px solid var(--whit);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--whit);
+    font-size: 2.8rem;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+section.painel1 .contain .des {
+    padding: 0 2.9%;
+    flex: 1;
+}
+
+section.painel1 .contain .des h2 {
+    font-family: 'Fredoka', sans-serif;
+    color: var(--whit);
+    font-weight: 600;
+    font-size: 1.9rem;
+    margin-bottom: 4px;
+}
+
+section.painel1 .contain .des p,
+section.painel1 .contain .des a {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--whit);
+    font-size: 0.98rem;
+    font-weight: 600;
+}
+
+section.painel1 .contain .des a {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+section.painel1 .contain .des a button {
+    width: 100%;
+    height: 48px;
+    border-radius: 7px;
+    border: 2px solid var(--whit);
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.25s ease-in-out;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--whit);
+    font-size: 0.89rem;
+    font-weight: 600;
+}
+
+section.painel1 .contain .des a button:hover {
+    background-color: var(--blu);
+    color: var(--blac2);
+}
+
+section.painel2 {
+    background-color: var(--blac2);
+    height: 840px;
+}
+
+section.painel2 h1 {
+    text-align: center;
+    font-family: 'Fredoka', sans-serif;
+    color: var(--whit);
+    font-size: 1.92rem;
+    font-weight: 600;
+    padding-top: 1.5%;
+}
+
+section.painel2 .contain {
+    background-color: var(--azure);
+    padding: 1.44% 2.5%;
+    margin: 1.44% 2.5%;
+    display: flex;
+    border-radius: 17px;
+    gap: 2%;
+    align-items: center;
+    justify-content: center;
+}
+
+section.painel2 .contain .img {
+    width: 90px;
+    height: 90px;
+    background-color: var(--blu3);
+    border: 2px solid var(--whit);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--whit);
+    font-size: 2.8rem;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+section.painel2 .contain .des {
+    padding: 0 2.9%;
+    flex: 1;
+}
+
+section.painel2 .contain .des h2 {
+    font-family: 'Fredoka', sans-serif;
+    color: var(--whit);
+    font-weight: 600;
+    font-size: 1.9rem;
+    margin-bottom: 4px;
+}
+
+section.painel2 .contain .des p,
+section.painel2 .contain .des a {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--whit);
+    font-size: 0.92rem;
+    font-weight: 800;
+}
+
+section.painel2 .contain .des a {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+section.painel2 .contain .des a button {
+    width: 100%;
+    height: 48px;
+    border-radius: 7px;
+    border: 2px solid var(--whit);
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.25s ease-in-out;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--whit);
+    font-size: 0.89rem;
+    font-weight: 600;
+}
+
+section.painel2 .contain .des a button:hover {
+    background-color: var(--blu);
+    color: var(--blac2);
+}
+
+span.abs {
+    background-color: rgb(197, 0, 0);
+    font-size: 65%;
+    border-radius: 5px;
+    padding: 3px 8px;
+}
+
+section.alert {
+    background-color: var(--blac2);
+    padding: 3% 10%;
+}
+
+section.alert .car {
+    background-color: #1d1a33;
+    padding: 1% 2%;
+    color: var(--whit);
+    border-radius: 20px;
+    text-align: center;
+}
+
+section.alert .car .text h1 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 45px;
+}
+
+section.alert .car .text p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+section.alert .car .text {
+    padding-bottom: 30px;
+}
+
+section.alert .car .bc {
+    background-image: linear-gradient(to right, #00a2ff, #7438ff, #920dff, #ff20e1);
+    height: 7px;
+}
+
+section.alert .car .gif img {
+    border-radius: 1000px;
+    width: 250px;
+    height: 250px;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    object-position: center;
+    border: 10px solid var(--gra);
+}
+
+section.divis {
+    background-image: linear-gradient(to right, #00a2ff, #7438ff, #920dff, #ff20e1);
+    height: 3px;
+}
+
+/* === multidisciplinar === */
+section.sobre h1.gold {
+    text-align: right;
+    font-size: 2.45rem;
+    color: var(--whit);
+    font-family: 'Fredoka', sans-serif;
+    line-height: 1.15;
+    margin-bottom: 1.5%;
+    font-weight: 600;
+    text-shadow: 0px 0px 15.3px var(--gold2);
+}
+
+section.sobre h1.gold span.gold {
+    color: var(--gold1);
+}
+
+/* ---- TEXTO ---- */
+section.sobre p.golden-plus {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--off_whit);
+    font-size: .98rem;
+    line-height: 1.55;
+    margin-left: 16%;
+    text-align: justify;
+    text-align-last: right;
+    font-weight: 700;
+}
+
+.contain h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--whit);
+    padding-bottom: 11px;
+}
+
+span.if {
+    color: var(--if);
+    font-weight: 700;
+}
+
+span.bradesco {
+    color: var(--brad);
+
+}
+
+span.senai {
+    color: var(--senai);
+    font-weight: 700;
+}
+
+p.curso {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 900;
+}
+
+span.bradesco, span.senai, span.if {
+    background-color: var(--whit);
+    border-radius: 8px;
+    padding: 3px 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+section.painel1 .contain .img-if {
+    width: 90px;
+    height: 90px;
+    background-color: var(--if);
+    border: 2px solid var(--whit);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--whit);
+    font-size: 2.8rem;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+section.painel1 .contain .img-brad {
+    width: 90px;
+    height: 90px;
+    background-color: var(--brad);
+    border: 2px solid var(--whit);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--whit);
+    font-size: 2.8rem;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+section.painel1 .contain .img-senai {
+    width: 90px;
+    height: 90px;
+    background-color: var(--senai);
+    border: 2px solid var(--whit);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--whit);
+    font-size: 2.8rem;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+span.exc {
+    font-family: 'Fredoka', sans-serif;
+    color: var(--whit);
+    background-color: #1c1a2c;
+    padding: 2.5px 5px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    border: 2px solid #4b457a;
+}
+
+span.exc span.blu {
+    color: var(--blu);
+}
+
+section.painel1 p.sub {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--whit);
+    text-align: center;
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+/* =========================
+   RESPONSIVIDADE FOOTER
+   ========================= */
+   @media (max-width: 768px) {
+    footer {
+        grid-template-columns: 1fr; /* tudo em 1 coluna */
+        text-align: left; /* opcional */
+    }
+
+    footer .info1,
+    footer .disc,
+    footer .out {
+        margin-bottom: 25px; /* espaço entre as seções */
+    }
+
+    footer .copy {
+        margin-top: 5px;
+    }
+
+    footer .info1 p.fe {
+        padding-right: 0; /* evita aperto no mobile */
+        text-align: center;
+    }
+
+    footer .info1 {
+        text-align: center;
+    }
+
+    footer .out {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    footer .disc {
+        border-block: 2px solid var(--gra);
+        text-align: center;
+        padding: 30px 0;
+    }
+
+    section.cards {
+        grid-template-columns: 1fr; /* tudo em 1 coluna */
+    }
+
+    section.cards .card img {
+        width: 100%;
+        aspect-ratio: 16/9;  /* ajuste aqui a proporção que você quiser */
+        object-fit: cover;    /* garante que não distorce */
+        border-radius: 15px;
+        display: block;
+        height: auto;
+    }
+
+    section.cards h1 {
+        font-size: 1.65rem;
+    }
+
+        section.sobre {
+            flex-direction: column;   /* imagem em cima, texto embaixo */
+            text-align: center;       /* centraliza títulos e textos */
+            height: auto;             /* evita quebrar o layout */
+            padding: 8% 8%;           /* mais confortável no mobile */
+            gap: 25px;                /* espaçamento bom entre imagem e texto */
+        }
+    
+        section.sobre img {
+            height: 220px;
+            width: 220px;
+            margin-bottom: 15px;
+        }
+    
+        section.sobre .desk {
+            max-width: 100%;
+            align-items: center;      /* centraliza toda a área de texto */
+            text-align: center;
+        }
+    
+        section.sobre h1 {
+            text-align: center;
+            margin-bottom: 12px;
+        }
+    
+        section.sobre p {
+            text-align: justify;
+            text-align-last: center;
+            margin-left: 0;           /* remove aquele recuo lateral */
+            font-size: .95rem;
+        }
+
+     /* TÍTULO GOLD */
+     section.sobre h1.gold {
+        text-align: center;       /* centraliza no mobile */
+        margin-bottom: 12px;
+        font-size: 2.4rem;          /* leve redução para caber melhor */
+    }
+
+    section.sobre h1.gold span.gold {
+        color: var(--gold1);      /* mantém a cor */
+    }
+
+    /* TEXTO GOLDEN-PLUS */
+    section.sobre p.golden-plus {
+        text-align: justify;       /* centraliza */
+        text-align-last: center;  
+        margin-left: 0;           /* remove aquele recuo lateral */
+        font-size: .95rem;        /* mais confortável no mobile */
+    }
+
+    section.title h1,
+    section.title1 h1,
+    section.title2 h1,
+    section.title3 h1,
+    section.title4 h1,
+    section.title5 h1 {
+        font-size: 2.1rem;
+    }
+
+    section.title p,
+    section.title1 p,
+    section.title2 p,
+    section.title3 p,
+    section.title4 p,
+    section.title5 p {
+        font-size: 1rem;
+    }
+
+    section.title {
+        height: 700px;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;  /* h1 ← → botões */
+        align-items: center;
+        padding: 3.5% 4% !important;     /* padding mais confortável */
+    }
+
+    header h1 {
+        font-size: 2rem;               /* reduz para não quebrar linha */
+    }
+
+    header button.btu {
+        width: 40px;
+        height: 40px;
+        font-size: 0.95rem;
+        margin: 0 2px;                   /* reduz espaçamento entre botões */
+    }
+
+    
+    /* CARD PRINCIPAL */
+    section.painel1 .contain {
+        flex-direction: column;      /* imagem em cima, texto embaixo */
+        text-align: center;          /* centraliza o conteúdo */
+        padding: 5% 5%;
+        margin: 5% 4%;
+        gap: 18px;                   /* espaço entre imagem e texto */
+    }
+
+    /* ÍCONE / IMAGEM */
+    section.painel1 .contain .img {
+        width: 85px;
+        height: 85px;
+        font-size: 2.6rem;
+    }
+
+    /* TEXTO */
+    section.painel1 .contain .des {
+        padding: 0;                  /* remove padding lateral */
+    }
+
+    section.painel1 .contain .des h2 {
+        font-size: 1.4rem;           /* reduz para encaixar */
+        margin-bottom: 8px;
+    }
+
+    section.painel1 .contain .des p,
+    section.painel1 .contain .des a {
+        font-size: 0.93rem;
+        text-align: center;
+    }
+
+    section.painel1 .contain .des p {
+        text-align: justify;       /* centraliza */
+        text-align-last: center;  
+    }
+
+    /* BOTÃO */
+    section.painel1 .contain .des a button {
+        width: 100%;
+        height: 45px;                /* um pouco menor no mobile */
+        font-size: 0.85rem;
+    }
+
+    /* PADDING GERAL DA SEÇÃO */
+    section.alert {
+        padding: 8% 6%;
+    }
+
+    /* CARD PRINCIPAL */
+    section.alert .car {
+        padding: 6% 5%;
+    }
+
+    /* TÍTULO */
+    section.alert .car .text h1 {
+        font-size: 2rem;          /* reduz para caber na tela */
+        line-height: 1.2;
+    }
+
+    /* PARÁGRAFO */
+    section.alert .car .text p {
+        font-size: 1rem;          /* leitura confortável */
+        text-align: justify;       /* centraliza */
+        text-align-last: center;
+    }
+
+    /* ESPAÇAMENTO DO BLOCO DE TEXTO */
+    section.alert .car .text {
+        padding-bottom: 20px;
+    }
+
+    /* GIF */
+    section.alert .car .gif img {
+        width: 180px;             /* menor para mobile */
+        height: 180px;
+        border-width: 6px;        /* borda proporcional */
+        margin: 0 auto;           /* garante centralização */
+        display: block;
+    }
+}
